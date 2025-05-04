@@ -24,11 +24,22 @@ public class Grade {
             posX = 60;
             posY += 40;
         }
-        int n = 0;
-        for (int i = 0; i < 100; i++)
-        draw.text(posX, posY, "" + rotY);
-        posX += 40;
-        n++;
-        this.rotY = (char) n;
+        posX = 20;
+        posY = 60;
+        int n = 65;
+        for (int i = 0; i < 10; i++) {
+            this.rotY = (char) n;
+            draw.text(posX, posY, "" + rotY);
+            posY += 40;
+            n++;
+        }
+        posX = 60;
+        posY = 20;
+        n = 0;
+        for (int i = 0; i < 10; i++) {
+            draw.text(posX, posY, "" + n);
+            posX += 40;
+            n++;
+        }
     }
 }
