@@ -24,6 +24,8 @@ public class App {
         App app = new App();
         Grade grade = new Grade();
         grade.desenhar(app.draw);
+        Navio navio = new Navio(5, 2, 3, true, grade);
+        navio.desenhar(app.draw);
 
     }
 }
