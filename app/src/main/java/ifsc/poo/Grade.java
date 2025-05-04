@@ -8,10 +8,8 @@ public class Grade {
     private int posY;
     private int lado;
     private int tamGrade;
-    private char rotY;
-    private int rotX;
 
-    public Grade (Draw draw) {
+    public void desenhar (Draw draw) {
         this.posX = 60;
         this.posY = 60;
         this.lado = 20;
@@ -27,8 +25,9 @@ public class Grade {
         posX = 20;
         posY = 60;
         int n = 65;
-        for (int i = 0; i < 10; i++) {
-            this.rotY = (char) n;
+        char rotY;
+        for (int i = 0; i < tamGrade; i++) {
+            rotY = (char) n;
             draw.text(posX, posY, "" + rotY);
             posY += 40;
             n++;
@@ -36,7 +35,7 @@ public class Grade {
         posX = 60;
         posY = 20;
         n = 0;
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < tamGrade; i++) {
             draw.text(posX, posY, "" + n);
             posX += 40;
             n++;
