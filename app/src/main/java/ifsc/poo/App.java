@@ -5,6 +5,8 @@ package ifsc.poo;
 
 import edu.princeton.cs.algs4.Draw;
 
+import java.awt.*;
+
 public class App {
 
     private Draw draw;
@@ -16,16 +18,24 @@ public class App {
         this.draw.setXscale(0, 1000);
         this.draw.setYscale(0, 600);
 
-
     }
 
     public static void main(String[] args) {
 
         App app = new App();
-        Grade grade = new Grade();
-        grade.desenhar(app.draw);
-        Navio navio = new Navio(5, 2, 3, true, grade);
-        navio.desenhar(app.draw);
-
+        Grade grade1 = new Grade(60, 60, 20, 10, Color.GRAY);
+        Navio navio1 = new Navio(4, 0, 0, true, grade1);
+        navio1.desenhar(app.draw);
+        Navio navio2 = new Navio(5, 3, 2, false, grade1);
+        navio2.desenhar(app.draw);
+        Navio navio3 = new Navio(2, 1, 8, true, grade1);
+        navio3.desenhar(app.draw);
+        Navio navio4 = new Navio(3, 5, 1, false, grade1);
+        navio4.desenhar(app.draw);
+        Navio navio5 = new Navio(3, 7, 5, false, grade1);
+        navio5.desenhar(app.draw);
+        grade1.desenhar(app.draw);
+        Grade grade2 = new Grade(600, 60, 20, 10, Color.GRAY);
+        grade2.desenhar(app.draw);
     }
 }
